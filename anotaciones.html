@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso de JS</title>
+  </head>
+  <body>
+    <h1>Anotaciones del curso de JS</h1>
+
+    <h2>Cadenas de texto <b>(Strings)</b> en JS</h2>
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"
+      >Documentación clase String de JS</a
+    >
+
+    <h4>Formas de definir una cadena de texto en JavaScript:</h4>
+    <ul>
+      <li>
+        <p><b>Usando doble comilla:</b> "Alexander"</p>
+      </li>
+      <li>
+        <p><b>Usando comilla simple:</b> 'Alexander'</p>
+      </li>
+      <li>
+        <p><b>Usando el constructor:</b>new String ('Alexander')</p>
+      </li>
+      <li>
+        <p><b>Template string: </b>`Alexander`</p>
+      </li>
+    </ul>
+
+    <h2>Números en JavaScript</h2>
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number"
+      >Documentación clase Number de JS</a
+    >
+    <p>
+      En JS no es necesario tomar en cuenta si un número es BigInt, si es
+      flotante, ni decimal, para JS un número, independientemente de cómo esté
+      escrito, es un número y ya
+    </p>
+
+    <h4>Formas de definir un número en JavaScript:</h4>
+    <ul>
+      <li>
+        <p><b>De manera simple:</b> 7</p>
+      </li>
+      <li>
+        <p><b>Usando el constructor:</b>new Number (7)</p>
+      </li>
+    </ul>
+
+    <h2>Funciones en JS</h2>
+
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions"
+      >Documentación sobre las funciones en JS</a
+    >
+
+    <h4>Funciones declaradas y Funciones expresadas</h4>
+
+    <p>
+      Las<b> funciones declaradas</b> son aquellas funciones que se definen con
+      la palabra clave function, seguida del nombre al igual que los parámetros
+      opcionales que deseemos utilizar en dicha función y, por último, las
+      llaves que definirán el bloque de código que ejecutará dicha función
+      <br />
+
+      Para hacer uso de esta función, se debe hacer un llamado, especificando
+      los argumentos (si así es requerido), de los que hará uso la función
+    </p>
+
+    <p>
+      Las <b>funciones expresadas</b> son aquellas que se pueden guardar en una
+      variable o constante: No es obligatorio que tengan nombre
+    </p>
+
+    <h4><u>Funciones flecha</u></h4>
+
+    <p>
+      Las <b>funciones flecha</b> son una manera de crear funciones expresadas
+      de una manera más abreviada
+    </p>
+    <p>
+      Si la sentencia que irá dentro de estas funciones flecha solo lleva una
+      línea, se pueden omitir las llaves al igual que también se puede omitir la
+      palabra return, ya que se convierte en algo implícito
+    </p>
+
+    <p>
+      Si se le da el nombre a una función expresada, se puede hacer referencia a
+      ella misma dentro de la misma función
+    </p>
+
+    <h4>Arreglo (Arrays) en JS</h4>
+
+    <p>
+      Los arreglos <b>arrays</b> son una estructura de datos que permiten tener
+      una colección de datos, sin importar su tipo, en una sola variable
+    </p>
+
+    <h2>Arrays</h2>
+
+    <a
+      href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array"
+      >Documentación de los arreglos en JS</a
+    >
+
+    <p>
+      Los arreglos <b>(Arrays)</b> en JS son una manera de crear una colección
+      de datos en una sola variable.
+    </p>
+    <br />
+    <p>
+      Esta estructura de datos permite operaciones de ordenamiento, búsqueda,
+      actualización, creación y eliminación, como si de una base de datos se
+      tratara <br />
+      Los índices de los arreglos empiezan en cero y, otra de sus
+      características, es que pueden almacenar en cada una de sus posiciones
+      variables de distintos tipos de datos.
+    </p>
+
+    <h2>Objetos</h2>
+
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
+      >Documentación sobre los objetos en JS</a
+    >
+
+    <p>
+      Los <b>objetos</b> son una colección de datos de tipo clave:valor que
+      permite almacenar cualquier tipo de dato en cada una de sus propiedades.
+      Estos tienen también la facultad de almacenar funciones como métodos.
+    </p>
+
+    <h2>Manejo de errores</h2>
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch"
+      >Documentación del manejo de errres en JavaScript</a
+    >
+
+    <p>
+      Las sentencias <b>try/catch</b> permiten en Javascript capturar los
+      posibles errores que se presenten al momento de ejecutar una sentencia de
+      código. Si la ejecución tuvo éxito, el intérprete se irá directamente al
+      bloque finally (si así se programó), o se saldrá del bloque try/catch para
+      seguir la ejecucion del programa normalmente. <br />
+
+      <strong
+        >Estas sentencias, por consecuencia, hacen parte de las estructuras de
+        control de JS</strong
+      >
+    </p>
+
+    <h2>Sentencias break y continue</h2>
+
+    <p>
+      Las sentencias <b>break y continue</b> permiten controlar el flujo de una
+      secuencia iterativa como lo son los ciclos <br />
+      Si la condiciendo evaluativa se cumple, la palabra break, como su
+      significado lo indica, interrumpirá y hará que se termine la secuencia
+      iterativa. La palabra continue lo que hará es saltarse la iteración en la
+      que la secuencia se encuentre en ese momento, lo que hará saltar a la
+      siguiente iteración.
+    </p>
+    <h2>Destructuring</h2>
+
+    <p>
+      El <b>destructuring</b> o <b>destructuración</b> es una forma nueva de
+      asignar valores de manera más ágil y dinámica a arreglos y a objetos.
+      <br />
+      Para hacer el destructuring, se debe de utilizar la misma sintaxis con la
+      que se creó la variable "fuente", así que, si la variable fuente viene de
+      un arreglo, la variable "destino" debe de crearse también en un arreglo, y
+      si es de un objeto, como un objeto. <br />
+      Para que la destructuración funcione en los objetos, la variable a crear
+      debe llamarse igual que la propiedad/varaible "fuente"
+    </p>
+
+    <h2>Parámetros REST</h2>
+    <p>
+      Los <b>parámetros REST</b> son una forma de recibir parámetros en
+      funciones o de asignar valores a las posiciones de un arreglo, sin saber
+      exactamente cuantos valores/parámetros van a llegar como argumentos
+    </p>
+    <br /><br /><br />
+
+    <a href="index.html">Volver a la página principal del curso</a>
+    <script src="scripts.js"></script>
+  </body>
+</html>
