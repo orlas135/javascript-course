@@ -10,8 +10,15 @@
 */
 
 /*Ejercicio 5*/
-const ejercicioCinco = (param) => {};
-ejercicioCinco();
+const ejercicioCinco = (param) => {
+  if (!param) return console.log(`La cadena de texto no fue enviada`);
+  if (!isNaN(param)) return console.log(`El valor ingresado es un número`);
+  if (param == " ")
+    return console.log(`La cadena de texto no puede estar vacía`);
+
+  return console.log(param.split("").reverse().join(""));
+};
+ejercicioCinco("Hola Mundo");
 
 /*Ejercicio 6*/
 

@@ -11,7 +11,7 @@
 */
 
 /* Ejercicio 1 V1*/
-function ejercicioUno_V1(param) {
+function ejercicioUno_V1(param = "") {
   if (!param) {
     return console.error(`No se ingresó ninguna cadena de texto para operar`);
   }
@@ -31,7 +31,7 @@ function ejercicioUno_V1(param) {
 // ejercicioUno_V1("Hola Mundo");
 
 /* Ejercicio 1 V2 */
-const ejercicioUno_V2 = (param) => {
+const ejercicioUno_V2 = (param = "") => {
   if (!param) {
     return console.error(`No se ingresó ninguna cadena de texto para operar`);
   }
@@ -71,13 +71,13 @@ function ejercicioDos_V1(param = "", range = undefined) {
 // ejercicioDos_V1(`Hola mundo`, 4);
 
 /* Ejercicio 2 V2*/
-function ejercicioDos_V2(param = "", range = undefined) {
+const ejercicioDos_V2 = (param = "", range = undefined) => {
   !param
     ? console.warn(`No se envió ninguna cadena de texto`)
     : range === 0
     ? console.warn(`No se ingresó la longitud para recortar el texto`)
     : console.info(param.slice(0, range));
-}
+};
 // ejercicioDos_V2("Hola Mundo", 3);
 
 /* Ejercicio 3 */
