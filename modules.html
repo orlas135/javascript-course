@@ -3,7 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Módulos en JS</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Módulos en JavaScript</h1>
+
+    <h3>Aclaraciones y anotaciones</h3>
+
+    <p>
+      Al querer hacer uso de módulos JavaScript en archivos HTML, se debe
+      especificar en la etiqueta <b>script</b> con el atributo <b>type</b> que
+      el archivo es un módulo. <br />
+      Dicho atributo debe ser igualado al valor
+      <b>module</b>
+    </p>
+
+    <p>No se pueden hacer dos exportaciones por defecto. Solamente una.</p>
+    <p>
+      Las exportaciones que no se hacen por defecto, se tienen que hacer
+      mediante destructuring.
+    </p>
+    <p>
+      No se pueden exportar por defecto constantes ni variables ni funciones
+      expresadas en la misma línea de su declaración. Todo esto debido al
+      ordenamiento de código de JS.
+      <br />
+      <strong
+        >Para exportar por defecto variables, constantes y funcions expresadas,
+        primero se declara la misma y, en la línea siguiente, se hace el export
+        por defecto</strong
+      >
+    </p>
+
+    <script src="scripts/modules.js" type="module"></script>
+    <!--Dando soporte a navegadores viejos y evitando que navegadores modernos también carguen este módulo ⤵️-->
+    <script src="scripts/no-module.js" nomodule></script>
+  </body>
 </html>
