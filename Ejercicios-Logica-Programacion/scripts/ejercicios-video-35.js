@@ -18,10 +18,38 @@ const ejercicioCinco = (param) => {
 
   return console.log(param.split("").reverse().join(""));
 };
-ejercicioCinco("Hola Mundo");
+// ejercicioCinco("Hola Mundo");
 
-/*Ejercicio 6*/
+/*Ejercicio 6 V1*/
+
+const ejercicioSeis_V1 = (cadena = "", param = "") => {
+  if (!cadena)
+    return console.log(`La cadena de texto a evaluar no fue enviada`);
+
+  if (typeof cadena !== "string")
+    return console.log(
+      `El tipo de dato del elemento a evaluar no puede ser distinto de una cadena de texto (string)`
+    );
+  if (!param)
+    return console.log(`El texto a buscar en el texto no fue enviado`);
+
+  let contador = 0;
+  let cadenaSeparada = cadena.split(" ");
+
+  cadenaSeparada.forEach((element) => {
+    if (element === param) {
+      contador++;
+    }
+  });
+
+  return console.log(
+    `El texto se encuentra un total de ${contador} veces en el texto enviado`
+  );
+};
+// ejercicioSeis_V1(`Hola mundo hola mundo hola hola mundo hola`, `hola`);
 
 /* Ejericio 7 */
+
+function ejercicio7() {}
 
 /* Ejercicio 8 */
