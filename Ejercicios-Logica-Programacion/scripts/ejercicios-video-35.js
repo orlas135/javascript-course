@@ -77,4 +77,4 @@ const ejercicioOcho = (cadena, pattern) => {
 };
 
 ejercicioOcho(`xyz1, xyz2, xyz3, xyz4 y xyz5`, `xyz`);
-ejercicioOcho(`alexorlas96`, `@`);
+ejercicioOcho(`alexorlas96@gmail.com@dom.com`, `@`);
