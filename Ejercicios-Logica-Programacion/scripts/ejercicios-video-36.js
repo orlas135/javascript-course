@@ -23,7 +23,6 @@ const ejercicioDiez = function (numero) {
       return console.log(`El parámetro enviado no es un número`);
     } else {
       let alReves = numero.toString().split("").reverse().join("");
-      console.log(alReves);
 
       return alReves === numero
         ? console.log(`El número es capicúa`)
@@ -31,21 +30,26 @@ const ejercicioDiez = function (numero) {
     }
   }
 };
-ejercicioDiez("252");
+// ejercicioDiez("212.212");
 
 const ejercicioOnce = (numero) => {
-  if (isNaN(numero)) return console.log(`El parámetro enviado no es un número`);
-
-  if (Math.sign(numero) < 0)
+  if (Math.sign(numero) == -1)
     return console.log(`El número no puede ser menor que cero`);
+  if (numero === 0 || numero === "0")
+    return console.log(`El factorial de ${numero} es: 1`);
 
-  let factorial = 0;
+  if (typeof numero !== "number") {
+    if (isNaN(numero)) {
+      return console.log(`El parámetro enviado no es un número`);
+    } else {
+      let factorial = 0;
 
-  for (index = numero - 1; index > 0; index--) {
-    factorial = numero * index;
-    numero = factorial;
+      for (index = numero - 1; index > 0; index--) {
+        factorial = numero * index;
+        numero = factorial;
+      }
+      return console.log(`El factorial del número es: ${factorial}`);
+    }
   }
-
-  return console.log(`El factorial del número es: ${factorial}`);
 };
-// ejercicioOnce(9);
+ejercicioOnce("8");
