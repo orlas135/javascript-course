@@ -20,9 +20,9 @@ const ejercicioCinco = (param) => {
 };
 // ejercicioCinco("Hola Mundo");
 
-/*Ejercicio 6 V1*/
+/*Ejercicio 6 */
 
-const ejercicioSeis_V1 = (cadena = "", param = "") => {
+const ejercicioSeis = (cadena = "", param = "") => {
   if (!cadena)
     return console.log(`La cadena de texto a evaluar no fue enviada`);
 
@@ -46,10 +46,35 @@ const ejercicioSeis_V1 = (cadena = "", param = "") => {
     `El texto se encuentra un total de ${contador} veces en el texto enviado`
   );
 };
-// ejercicioSeis_V1(`Hola mundo hola mundo hola hola mundo hola`, `hola`);
+// ejercicioSeis(`Hola mundo hola mundo hola hola mundo hola`, `hola`);
 
 /* Ejericio 7 */
 
-function ejercicio7() {}
+function ejercicioSiete(cadena = "") {
+  if (!cadena) return console.log(`La cadena a evaluar no puede estar vacía`);
+
+  cadena = cadena.toLowerCase();
+  let alReves = cadena.split("").reverse().join("");
+
+  return cadena === alReves
+    ? console.log(
+        `La palabra envíada (${cadena}) sí es un palíndromo: ${alReves}`
+      )
+    : console.log(
+        `La palabra enviada (${cadena}) no es un palíndromo: ${alReves}`
+      );
+}
+// ejercicioSiete(`sometemos`);
 
 /* Ejercicio 8 */
+const ejercicioOcho = (cadena, pattern) => {
+  if (!cadena) return console.log(`La cadena a evaluar no puede estar vacía`);
+  if (!pattern) return console.log(`El patrón a buscar no puede estar vacío`);
+
+  const patron = new RegExp(pattern, "ig");
+
+  return console.log(cadena.replace(patron, ""));
+};
+
+ejercicioOcho(`xyz1, xyz2, xyz3, xyz4 y xyz5`, `xyz`);
+ejercicioOcho(`alexorlas96`, `@`);
