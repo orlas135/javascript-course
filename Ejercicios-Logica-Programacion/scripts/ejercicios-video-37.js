@@ -82,5 +82,4 @@ const ejercicioCatorce = (grados = undefined, escala = "") => {
     }
   }
 };
-
-ejercicioCatorce(400, "c");
+// ejercicioCatorce(400, "c");
