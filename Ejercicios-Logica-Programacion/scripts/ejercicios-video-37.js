@@ -50,4 +50,37 @@ const ejercicioTrece = (numero = undefined) => {
 };
 // ejercicioTrece("920");
 
-const ejercicioCatorce = () => {};
+const ejercicioCatorce = (grados = undefined, escala = "") => {
+  // if ((!(escala != "F") && !(escala != "C")) || typeof escala != "string") {
+  //   console.log(typeof escala);
+
+  //   return console.log(
+  //     `No se envió un parámetro correcto para convertir (Únicas opciones: F o C)`
+  //   );
+  // }
+  if (typeof grados !== "number") {
+    if (isNaN(grados)) {
+      return console.log(
+        `El tipo de dato de los grados a convertir no puede ser distinto de numero`
+      );
+    }
+  } else if (!escala || escala === " ") {
+    return console.log(`No se envió parámetro de escala a convertir`);
+  } else {
+    if (escala.toUpperCase() === "F") {
+      return console.log(
+        `${grados} grados Fahrenheit convertidos a grados Celsius son: ${
+          (grados - 32) * 0.555
+        } grados Celsius`
+      );
+    } else if (escala.toUpperCase() === "C") {
+      return console.log(
+        `${grados} grados Celsius convertidos a grados Fahrenheit son: ${
+          grados * (9 / 5) + 32
+        } grados Fahrenheit`
+      );
+    }
+  }
+};
+
+ejercicioCatorce(400, "c");
