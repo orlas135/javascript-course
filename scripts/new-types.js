@@ -1,3 +1,5 @@
+/*Symbol*/
+
 let id = Symbol("id");
 let id_2 = Symbol("id_2");
 
@@ -26,8 +28,10 @@ persona[SALUDAR] = () => {
 //   console.log(persona[propiedad]);
 // }
 
-/*Listando los símblos de un objeto */
+/*Listando los símbolos de un objeto */
 console.log(Object.getOwnPropertySymbols(persona));
+
+/*Sets */
 
 const set = new Set([
   1,
@@ -82,3 +86,86 @@ console.log(arreglo);
 arreglo.forEach((element) => {
   console.log(element * 2);
 });
+
+/*Maps */
+let mapa = new Map();
+
+mapa.set("nombre", "Alex");
+mapa.set("apellido", "Orlas");
+mapa.set("edad", 28);
+
+console.log(mapa);
+console.log(mapa.size);
+console.log(mapa.has("correo"));
+console.log(mapa.has("nombre"));
+console.log(mapa.get("nombre"));
+
+mapa.set("nombre", "Alexander Orlas");
+console.log(mapa);
+
+mapa.delete("apellido");
+console.log(mapa);
+
+const mapa2 = new Map([
+  ["nombre", "condorito"],
+  ["edad", 28],
+  ["animal", "ave"],
+]);
+
+console.log(mapa2);
+
+for (const [llave, valor] of mapa2) {
+  console.log(`Llave: ${llave}. Valor: ${valor}`);
+}
+
+const llavesMapa2 = [...mapa2.keys()];
+const valoresMapa2 = [...mapa2.values()];
+
+console.log(llavesMapa2);
+console.log(valoresMapa2);
+
+console.clear();
+/*WeakSets y WeakMaps */
+
+/*lanza error */
+// const ws = new WeakSet([
+//   1,
+//   2,
+//   3,
+//   3,
+//   4,
+//   5,
+//   true,
+//   false,
+//   false,
+//   {},
+//   {},
+//   "hola",
+//   "HoLa",
+// ]);
+// const ws = new WeakSet();
+// let valor1 = { "Valor 1": 1 };
+// let valor2 = { "Valor 2": 2 };
+// let valor3 = { "Valor 3": 3 };
+
+// ws.add(valor1);
+// ws.add(valor2);
+
+// console.log(ws);
+// console.log(ws.has(valor1));
+// console.log(ws.has(valor3));
+
+// ws.delete(valor2);
+// // console.log(ws);
+
+// ws.add(valor2);
+// ws.add(valor3);
+// // console.log(ws);
+
+// setInterval(() => {
+//   console.log(ws);
+// }, 10000);
+
+// setTimeout(() => {
+//   (valor1 = null), (valor2 = null), (valor3 = null);
+// }, 500);

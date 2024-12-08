@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Asincronía</h1>
+
+    <h3>Temporizadores</h3>
+
+    <p>
+      Los temporizados son útiles para añadir un tiempo de espera antes de
+      ejecutar cualquier acción o para ejecutar una acción cada cierto tiempo.
+      Reciben una funcion <b>callback</b> que es la que se ejecuta después del
+      tiempo especificado o cada cierto tiempo especificado.
+    </p>
+
+    <h2>Asincronía en JavaScript</h2>
+
+    <p>
+      La asincronía en JavaScript funciona bajo un modelo <b>LIFO</b> (Last In
+      First Out) sobre un solo hilo de ejecución:
+    </p>
+
+    <img
+      src="https://d2diavcdqru7hy.cloudfront.net/blog-inner-images/n5pIHFKy2IRZEoCqvwzq1kCf1D4CQFNoe5UfHGRf.webp"
+      alt=""
+      width="500px"
+    />
+
+    <h2>Concurrencia y paralelismo:</h2>
+
+    <h3>Concurrencia</h3>
+    <p>
+      Ocurre cuando múltiples tareas <b>progresan</b> de
+      manera simultánea, pero no necesariamente al mismo tiempo.
+      <h4>Ejemplo:</h4> Si tienes un solo chef cocinando varios platos, este va cambiando
+      entre tareas: pone a hervir agua, corta vegetales, y luego vuelve a
+      revisar la olla. Solo se concentra en una tarea a la vez, pero está
+      gestionando varias.
+    </p>
+
+    <h3>Paralelismo</h3>
+    <p>
+      Ocurre cuando <b>múltiples tareas se ejecutan literalmente al mismo tiempo</b>, usando varios recursos (como múltiples CPUs o núcleos de CPU).
+
+      <h4>Ejemplo</h4>
+      Si tienes varios chefs, cada uno cocinando un plato distinto al mismo tiempo, tienes paralelismo. Cada chef trabaja en su propia tarea sin interferir con los demás.
+    </p>
+
+    <h1>Callbacks</h1>
+
+    <p>Primer mecanismo que utiliza JavaScript para trabajar la asincronía</p>
+    <p>No se recomienda utilizarlos porque se puede crear un callback hell</p>
+    <p>Son funciones que se envían como parámetros a una función, este parámetro/funciones se ejecuta inmediatamente se llama a la función principal</p>
+
+    <h1>Promesas</h1>
+    <p>Es otro de los métodos con el que se puede trabajar la asincronía, estas funcionan con dos recursos principales. <strong>result</strong> y <strong>reject</strong></p>
+
+
+    <h3>¿Qué método usar?</h3>
+    <p>Si solo se va a hacer un proceso, se pueden utilizar las callbacks, si se requieren hacer más procesos asíncronos, se recomienda utilizar promesas</p>
+
+    <h1>Funciones asíncronas (async/await)</h1>
+
+
+
+    <script src="./scripts/asincronia.js"></script>
+  </body>
+</html>
